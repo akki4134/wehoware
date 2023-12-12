@@ -25,3 +25,129 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Customizing the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width for vertical scrollbars */
+  height: 5px; /* Adjust the height for horizontal scrollbars */
+}
+
+/* Customizing the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #f48585;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f48585;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f48585;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgb(247, 251, 6);
+  color: transparent;
+}
+
+.slide-animation {
+  animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 220px;
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -300px;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -300px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  85% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes size {
+  0% {
+    transform: scale(1, 1);
+  }
+  35% {
+    transform: scale(1.4, 1.4);
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  85% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 158px;
+  }
+  50% {
+    width: 60px;
+  }
+  100% {
+    width: 158px;
+  }
+}
+
+.shrink-animation {
+  animation: shrink 1.7s infinite ease-out;
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite ease-in-out;
+}
+
+.size-animation {
+  animation: size 1s infinite ease-in-out;
+}
+
